@@ -1,0 +1,327 @@
+:root {
+  --amarelo: rgb(247, 228, 172); 
+  --app-grey: #F2F2F2;
+  --azul: rgb(91, 91, 229);
+  --azul-fran: rgb(102, 138, 255);
+  --button-favs: rgba(0, 0, 0, 0.116);
+  --error: rgb(255, 0, 0);
+  --exito: rgb(0, 147, 57);
+  --fuentes-hover: rgb(136, 136, 136);
+  --grey: rgb(242, 243, 248);
+  --grey-button: 	rgb(115, 147, 179);
+  --semi-oscuro: #8c8c8e;
+  --theme-dark: rgb(45, 41, 41);
+  --theme-white: rgb(255,255,255);
+  --verde-fuentes: rgb(24, 106, 59);
+  } 
+
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(./images/OIG.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.app {
+  
+  width: auto;
+  padding:0%;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.favButton {
+  background-color: var(--button-favs);
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+
+}
+
+nav {
+
+  display: flex;
+  width: 100%;
+  justify-content:space-around;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  
+}
+
+ul {
+  
+  display: inline-flex;
+  list-style:none ;
+  margin: 20px;
+  padding: 0px;
+  align-items: center;
+  margin: 30px 20px 30px 80px;
+ 
+}
+
+.sf {
+  
+  display: flex;
+  font-size: xx-large;
+  width: 30rem;
+  align-items: center;
+  justify-content: left;
+  
+}
+ 
+.logo {
+  
+  display: flex;
+  width: 40px;
+  height: 30px;
+  margin:10px 10px 5px 10px;
+  padding: 0%;
+  border-radius: 5px;
+  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--amarelo) 0px 9px 30px;
+ 
+}
+
+li {
+  
+  width: 8rem;
+  margin: 0px;
+}
+
+.nav-a {
+  width: 8rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+
+}
+
+button {
+  background-color: var(--semi-oscuro);
+  color: var(--app-grey);
+  border-radius: 3px;
+  cursor: pointer;
+  height: 30px;
+  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--amarelo) 0px 9px 30px;
+ 
+}
+
+.dark-nav {
+  background-color: var(--theme-dark);
+  color: var(--theme-white);
+  
+}
+
+.light-nav {
+  background-color: var(--theme-white);
+  color: var(--theme-dark);
+}
+
+h1 {
+  font-size: 50px;
+  margin: 50px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  animation: animateTitulo 4s 1;
+}
+ 
+h3 {
+  display: flex;
+  justify-content:center;
+  margin: 10px 0px 0px 0px;
+}
+
+h4 {
+  display: flex;
+  justify-content:center;
+  margin: 10px 0px 0px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  max-width: 700px; 
+  height: auto; 
+  margin: 20px auto; 
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 280px;
+  height: 30px;
+  margin: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.button-submit {
+  display: flex;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--azul-fran);
+  border: 2px solid var(--azul-fran) ;
+  margin: 20px;
+}
+
+.button-submit:hover {
+  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--azul) 0px 5px 20px;
+}
+
+.alert-success {
+  transition: color 0.5s ease-in-out;
+  color: var(--exito);
+  opacity: 1;
+  transform: scale(1.2)
+}
+
+.mensaje-error.aparecer {
+  transition: color 0.5s ease-in-out;
+  color: var(--error); 
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-body {
+  width: 100%;
+  height: 90%;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px , auto));
+  grid-gap: 2%; 
+}
+
+.card {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px , auto));
+  grid-gap: 1%;
+  text-align:center;
+  align-items:center;
+  opacity: 1;
+  filter: contrast(110%);
+  width: 300px;
+  height: 400px;
+  padding: 1rem;
+  border: 2px solid rgb(136, 136, 136);
+  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--azul) 0px 5px 20px;
+  border-radius: 8px;
+}
+
+.card:hover {
+  border: 2px solid rgb(206, 217, 142);
+
+}
+
+.card-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-gap:2%;
+  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--azul) 0px 5px 20px ;
+  /* border: 2px solid var(--app-grey) ; */
+  border-radius: 8px;
+  margin: 0px 10px 0px 10px;
+  padding: 10px 10px 60px 10px;
+}
+
+a {
+  display:grid;
+  width: 230px;
+  text-align: center;
+  align-items: center;
+  margin: 0px 0px 5px 5px;
+  cursor: pointer; 
+  color: var(--verde-fuentes);
+}
+
+a:hover {
+  color: var(--fuentes-hover);
+}
+
+.img-card {
+  display: flex;
+  width: 230px;
+  height: auto;
+  margin: 0px;
+  border-radius: 10px;
+}
+
+.dark {
+  
+  background-image: url(./images/noche.jpg);
+  background-size: cover;
+  background-position: center center;
+  color: var(--theme-white);
+}
+
+.dark a {
+  color: var(--theme-white);
+}
+.dark a:hover {
+  color: var(--fuentes-hover);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  height: 8rem;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+footer img {
+  width: 40px;
+  height: 30px;
+  margin: 0px 0px 0px 20px;
+  border-radius: 5px;
+  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--verde-fuentes) 0px 5px 10px;
+  border: 1px solid var(--verde-fuentes);
+}
+
+footer p {
+font-size: 2rem;
+margin: 20px 10px 0px 30px; 
+color: var(--verde-fuentes);
+animation: animateTitulo 4s infinite;
+}
+
+@keyframes animateTitulo{
+  0%{
+    opacity: 0%;
+    transform: rotateY(90deg);
+    filter: blur(10px);
+  }
+  100%{
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter: blur(0px);
+  }
+}
