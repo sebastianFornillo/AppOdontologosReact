@@ -17,7 +17,7 @@
 
 
 body {
-  height: 100%;
+  
   width: 100%;
   margin: 0px;
   padding: 0px;
@@ -26,9 +26,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./images/OIG.jpg);
+   background-image: url(./images/OIG.jpg);
   background-size: cover;
-  background-position: center center;
+  background-position: center center; 
+  
 }
 
 .app {
@@ -119,7 +120,7 @@ button {
  
 }
 
-.dark-nav {
+/* .dark-nav {
   background-color: var(--theme-dark);
   color: var(--theme-white);
   
@@ -128,7 +129,7 @@ button {
 .light-nav {
   background-color: var(--theme-white);
   color: var(--theme-dark);
-}
+} */
 
 h1 {
   font-size: 50px;
@@ -243,7 +244,7 @@ form {
   /* border: 2px solid var(--app-grey) ; */
   border-radius: 8px;
   margin: 0px 10px 0px 10px;
-  padding: 10px 10px 60px 10px;
+  padding: 10px 10px 50px 10px;
 }
 
 a {
@@ -267,7 +268,12 @@ a:hover {
   margin: 0px;
   border-radius: 10px;
 }
-
+.light{
+  background-image: url(./images/OIG.jpg);
+  background-size: cover;
+  background-position: center center;
+  color: var(--theme-dark);
+}
 .dark {
   
   background-image: url(./images/noche.jpg);
