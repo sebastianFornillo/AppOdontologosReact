@@ -1,32 +1,31 @@
 :root {
-  --amarelo: rgb(247, 228, 172); 
+  --amarrelo: rgb(247, 228, 172); 
   --app-grey: #F2F2F2;
   --azul: rgb(91, 91, 229);
-  --azul-fran: rgb(102, 138, 255);
+  --azul-francia2: rgb(102, 138, 255);
   --button-favs: rgba(0, 0, 0, 0.116);
-  --error: rgb(255, 0, 0);
+  --error: rgb(199, 28, 28);
   --exito: rgb(0, 147, 57);
-  --fuentes-hover: rgb(136, 136, 136);
+  --fuente-hover: rgb(136, 136, 136);
   --grey: rgb(242, 243, 248);
   --grey-button: 	rgb(115, 147, 179);
-  --semi-oscuro: #8c8c8e;
+  --gris-oscuro: #8c8c8e;
   --theme-dark: rgb(45, 41, 41);
   --theme-white: rgb(255,255,255);
-  --verde-fuentes: rgb(24, 106, 59);
+  --fuente-verde: rgb(24, 106, 59);
   } 
 
 
 body {
   
   width: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   background-image: url(./images/OIG.jpg);
   background-size: cover;
   background-position: center center; 
   
@@ -35,8 +34,8 @@ body {
 .app {
   
   width: auto;
-  padding:0%;
-  margin: 0px;
+  padding:0;
+  margin: 0;
   border-radius: 5px;
 }
 
@@ -59,7 +58,7 @@ nav {
   justify-content:space-around;
   align-items: center;
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   
 }
@@ -93,7 +92,7 @@ ul {
   margin:10px 10px 5px 10px;
   padding: 0%;
   border-radius: 5px;
-  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--amarelo) 0px 9px 30px;
+  box-shadow: var(--gris-oscuro) 0px 2px 95px, var(--amarrelo) 0px 9px 30px;
  
 }
 
@@ -111,25 +110,14 @@ li {
 }
 
 button {
-  background-color: var(--semi-oscuro);
+  background-color: var(--button-favs);
   color: var(--app-grey);
   border-radius: 3px;
   cursor: pointer;
   height: 30px;
-  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--amarelo) 0px 9px 30px;
+  box-shadow: var(--gris-oscuro) 0px 2px 95px, var(--amarrelo) 0px 9px 30px;
  
 }
-
-/* .dark-nav {
-  background-color: var(--theme-dark);
-  color: var(--theme-white);
-  
-}
-
-.light-nav {
-  background-color: var(--theme-white);
-  color: var(--theme-dark);
-} */
 
 h1 {
   font-size: 50px;
@@ -184,27 +172,32 @@ form {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: var(--azul-fran);
-  border: 2px solid var(--azul-fran) ;
+  background: var(--azul-francia2);
+  border: 2px solid var(--azul-francia2) ;
   margin: 20px;
 }
 
 .button-submit:hover {
-  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--azul) 0px 5px 20px;
+  box-shadow: var(--gris-oscuro) 0px 2px 95px, var(--azul) 0px 5px 20px;
 }
 
 .alert-success {
   transition: color 0.5s ease-in-out;
-  color: var(--exito);
+  color: var(--fuente-verde);
   opacity: 1;
-  transform: scale(1.2)
+  transform: scale(1.2);
+  animation: animateTitulo 1s 1;
 }
-
+.aparecer{
+  animation: animateTitulo  1.5s 1;
+  transform: scale(1);
+}
 .mensaje-error.aparecer {
   transition: color 0.5s ease-in-out;
   color: var(--error); 
   opacity: 1;
-  transform: scale(1);
+ 
+
 }
 
 .card-body {
@@ -225,23 +218,21 @@ form {
   filter: contrast(110%);
   width: 300px;
   height: 400px;
-  padding: 1rem;
+  padding: 0.8rem;
   border: 2px solid rgb(136, 136, 136);
-  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--azul) 0px 5px 20px;
+  box-shadow: var(--gris-oscuro) 0px 2px 95px, var(--azul) 0px 5px 20px;
   border-radius: 8px;
 }
 
-.card:hover {
+/* .card:hover {
   border: 2px solid rgb(206, 217, 142);
 
-}
+} */
 
 .card-grid {
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   grid-gap:2%;
-  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--azul) 0px 5px 20px ;
-  /* border: 2px solid var(--app-grey) ; */
   border-radius: 8px;
   margin: 0px 10px 0px 10px;
   padding: 10px 10px 50px 10px;
@@ -254,11 +245,11 @@ a {
   align-items: center;
   margin: 0px 0px 5px 5px;
   cursor: pointer; 
-  color: var(--verde-fuentes);
+  color: var(--fuente-verde);
 }
 
 a:hover {
-  color: var(--fuentes-hover);
+  color: var(--fuente-hover);
 }
 
 .img-card {
@@ -269,24 +260,29 @@ a:hover {
   border-radius: 10px;
 }
 .light{
-  background-image: url(./images/OIG.jpg);
+  background: url(./images/OIG.jpg) center center;
   background-size: cover;
-  background-position: center center;
+  background-attachment: fixed;
   color: var(--theme-dark);
 }
 .dark {
   
-  background-image: url(./images/noche.jpg);
+  background: url(./images/noche.jpg) center center;
   background-size: cover;
-  background-position: center center;
+  background-attachment: fixed;
   color: var(--theme-white);
 }
-
+.light a:hover {
+  box-shadow: var(--amarrelo) 0px 2px 95px, var(--gris-oscuro) 0px 9px 30px;
+  border-radius: 8px;
+}
 .dark a {
   color: var(--theme-white);
 }
 .dark a:hover {
-  color: var(--fuentes-hover);
+  
+  box-shadow: var(--gris-oscuro) 0px 2px 95px, var(--amarrelo) 0px 9px 30px;
+  border-radius: 8px;
 }
 
 footer {
@@ -297,7 +293,7 @@ footer {
   align-items: center;
   padding: 0px;
   width: 100%;
-  height: 8rem;
+  height: 15rem;
   margin: 0;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
@@ -308,14 +304,13 @@ footer img {
   height: 30px;
   margin: 0px 0px 0px 20px;
   border-radius: 5px;
-  box-shadow: var(--semi-oscuro) 0px 2px 95px, var(--verde-fuentes) 0px 5px 10px;
-  border: 1px solid var(--verde-fuentes);
+  box-shadow: var(--gris-oscuro) 0px 2px 95px, var(--fuente-verde) 0px 5px 10px;
+  border: 1px solid var(--fuente-verde);
 }
-
 footer p {
 font-size: 2rem;
 margin: 20px 10px 0px 30px; 
-color: var(--verde-fuentes);
+color: var(--fuente-verde);
 animation: animateTitulo 4s infinite;
 }
 
